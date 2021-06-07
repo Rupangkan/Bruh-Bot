@@ -1,6 +1,6 @@
 # Bruh-Bot :
 
-### Discord Bot using the FOAAS API  
+### Discord Bot using the FOAAS API. 😉 Have Fun. 🤡
 
 # Set up your Environment Variable :
 ```
