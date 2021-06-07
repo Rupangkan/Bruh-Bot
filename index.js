@@ -52,6 +52,9 @@ async function getReply(arr){
 
 //Accepting message from the users
 client.on("message", async msg =>{
+  // if(msg.author.bot) return
+  
+
   if(msg.content === "$help"){
     try{
       let commands = await help()
@@ -59,11 +62,12 @@ client.on("message", async msg =>{
     }catch(e){
       console.log(e.message)
     }
-  }
-  else if(msg.content.includes("$bruh")){
+  }else if(msg.author.bot){
+    return
+  }else if(msg.content.startsWith("$bruh")){
     try{
       let data = await getReply(msg.content)
-      console.log(data)
+      // console.log(data)
       msg.channel.send(data)
       return
     }catch(error){
@@ -71,7 +75,7 @@ client.on("message", async msg =>{
     }
   }
   let message = msg.content.toLowerCase()
-  if(msg.author.bot) return
+  
   if(message === "anke nahaba"){
     msg.reply("Anke a haba")
     return
