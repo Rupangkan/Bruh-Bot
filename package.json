@@ -15,5 +15,8 @@
     "express": "^4.17.1",
     "foaas-client": "^0.2.0",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "ws": ">=7.4.6"
   }
 }
